@@ -2,18 +2,13 @@
 
 ### (still) Just a WebApplication
 <>
-### Profile-Finder v0.0.2  
-  
-> API end-point for registering users /api/auth/aanmelden works without problems.  
-  
-> Newly registered users are saved in MongoDB database collection 'users'  
-  
-> On /login page you can login with the newly registered account, account credentials email and hashed password are found and compared to credentials in database collection 'users'.  
-  
->Password hash is compared and verified that the password is correct and still is securely saved.  
+### Profile-Finder v0.0.3
+
+> NextJS upgrade to version 13, ready for migrating pages files to App folder
+> Created user profile page, user hase to be authorize to land on profile page, otherwise redirected to /login
 
 <>
-###  Future functionalities and requirements:
+###  (future) Functionalities, ideas, requirements and specifications (to be developed)
 - (Native) React application for Android and iOS, functioning exactly the same as the webapp.
 
 - Has to be always fast, app has to be very smooth to handle and very fast, no noticeable loading times and has to respond immediately when user selects/browses/configures/searches/opens pages etc.
@@ -41,7 +36,21 @@ There will be different kinds of authorization for users in the group, because m
 
 <>
 
-# Version update history:
+
+# older versions:
+<>
+### Profile-Finder v0.0.2
+  
+> API end-point for registering users /api/auth/aanmelden works without problems.  
+  
+> Newly registered users are saved in MongoDB database collection 'users'  
+  
+> On /login page you can login with the newly registered account, account credentials email and hashed password are found and compared to credentials in database collection 'users'.  
+  
+>Password hash is compared and verified that the password is correct and still is securely saved.  
+
+
+
 <>
 ### Profile-Finder v0.0.1
 
