@@ -1,4 +1,4 @@
-# Profile-Finder
+# Profile-Finder v0.0.1
 
 > Profile social webapp project, is going to be developed to have search functionality to list and find profiles.  
 >
