@@ -37,7 +37,7 @@ There will be different kinds of authorization for users in the group, because m
 <>
 
 
-# older versions:
+# Older versions:
 <>
 ### Profile-Finder v0.0.2
   
