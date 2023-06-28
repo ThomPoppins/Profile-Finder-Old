@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { useFormik } from 'formik'
+import { registerValidate } from '../lib/validate'
 
 export default function Register() {
     const [show, setShow] = useState({password: false, cpassword: false});
@@ -17,6 +18,7 @@ export default function Register() {
             password: '',
             cpassword: ''
         },
+        validate: registerValidate,
         onSubmit
     })
 
@@ -38,7 +40,7 @@ export default function Register() {
 
                 {/* form */}
                 <form className='flex flex-col gap-5' onSubmit={formik.handleSubmit}>
-                    <div className={styles.input_group}>
+                    <div className={`${styles.input_group} ${formik.errors.gebruikersnaam && formik.touched.gebruikersnaam ? 'border-rose-600' : ''}`}>
                         <input
                             type='text'
                             name='gebruikersnaam'
@@ -50,7 +52,8 @@ export default function Register() {
                             <HiOutlineUser size={25} />
                         </span>
                     </div>
-                    <div className={styles.input_group}>
+                    {formik.errors.gebruikersnaam && formik.touched.gebruikersnaam ? <span  className='text-rose-500'>{formik.errors.gebruikersnaam}</span> : <></>}
+                    <div className={`${styles.input_group} ${formik.errors.email && formik.touched.email ? 'border-rose-600' : ''}`}>
                         <input
                             type='email'
                             name='email'
@@ -62,8 +65,8 @@ export default function Register() {
                             <HiAtSymbol size={25} />
                         </span>
                     </div>
-
-                    <div className={styles.input_group}>
+                    {formik.errors.email && formik.touched.email ? <span  className='text-rose-500'>{formik.errors.email}</span> : <></>}
+                    <div className={`${styles.input_group} ${formik.errors.password && formik.touched.password ? 'border-rose-600' : ''}`}>
                         <input
                             type={`${show.password ? "text" : "password"}`}
                             name='password'
@@ -75,8 +78,8 @@ export default function Register() {
                             <HiFingerPrint size={25} />
                         </span>
                     </div>
-
-                    <div className={styles.input_group}>
+                    {formik.errors.password && formik.touched.password ? <span  className='text-rose-500'>{formik.errors.password}</span> : <></>}
+                    <div className={`${styles.input_group} ${formik.errors.cpassword && formik.touched.cpassword ? 'border-rose-600' : ''}`}>
                         <input
                             type={`${show.cpassword ? "text" : "password"}`}
                             name='cpassword'
@@ -88,8 +91,7 @@ export default function Register() {
                             <HiFingerPrint size={25} />
                         </span>
                     </div>
-
-
+                    {formik.errors.cpassword && formik.touched.cpassword ? <span  className='text-rose-500'>{formik.errors.cpassword}</span> : <></>}
                     {/* login buttons */}
                     <div className='input-button'>
                         <button type='submit' className={styles.button}>
@@ -97,7 +99,7 @@ export default function Register() {
                         </button>
                     </div>
                 </form>
-
+                
                 {/* bottom */}
                 <div className='input-group'>
                     <p className='text-center text-gray-400 '>
