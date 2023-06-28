@@ -25,7 +25,14 @@ export default function Login() {
   console.log(formik.errors)
 
   async function onSubmit(values) {
-    console.log(values)
+    const status = await signIn('credentials', {
+      redirect: false,
+      email: values.email,
+      password: values.password,
+      callbackUrl: "/",
+    })
+
+    console.log(status);
   }
 
   // Google Handler function
