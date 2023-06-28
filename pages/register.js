@@ -5,10 +5,24 @@ import { HiAtSymbol, HiFingerPrint, HiOutlineUser } from "react-icons/hi";
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
+import { useFormik } from 'formik'
 
 export default function Register() {
-
     const [show, setShow] = useState({password: false, cpassword: false});
+    // formik hook
+    const formik = useFormik({
+        initialValues: {
+            gebruikersnaam: '',
+            email: '',
+            password: '',
+            cpassword: ''
+        },
+        onSubmit
+    })
+
+    async function onSubmit(values) {
+        console.log(values)
+    }
 
     return (
         <Layout>
@@ -23,13 +37,14 @@ export default function Register() {
                 </div>
 
                 {/* form */}
-                <form className='flex flex-col gap-5'>
+                <form className='flex flex-col gap-5' onSubmit={formik.handleSubmit}>
                     <div className={styles.input_group}>
                         <input
                             type='text'
                             name='gebruikersnaam'
                             placeholder='Gebruikersnaam'
                             className={styles.input_text}
+                            {...formik.getFieldProps('gebruikersnaam')}
                         />
                         <span className='icon flex items-center px-4'>
                             <HiOutlineUser size={25} />
@@ -41,6 +56,7 @@ export default function Register() {
                             name='email'
                             placeholder='Email'
                             className={styles.input_text}
+                            {...formik.getFieldProps('email')}
                         />
                         <span className='icon flex items-center px-4'>
                             <HiAtSymbol size={25} />
@@ -53,6 +69,7 @@ export default function Register() {
                             name='password'
                             placeholder='Wachtwoord'
                             className={styles.input_text}
+                            {...formik.getFieldProps('password')}
                         />
                         <span className='icon flex items-center px-4' onClick={() => setShow({ ...show, password: !show.password })}>
                             <HiFingerPrint size={25} />
@@ -65,6 +82,7 @@ export default function Register() {
                             name='cpassword'
                             placeholder='Herhaal wachtwoord'
                             className={styles.input_text}
+                            {...formik.getFieldProps('cpassword')}
                         />
                         <span className='icon flex items-center px-4' onClick={() => setShow({ ...show, cpassword: !show.cpassword })}>
                             <HiFingerPrint size={25} />
@@ -75,7 +93,7 @@ export default function Register() {
                     {/* login buttons */}
                     <div className='input-button'>
                         <button type='submit' className={styles.button}>
-                            Login
+                            Registreer
                         </button>
                     </div>
                 </form>
@@ -91,4 +109,3 @@ export default function Register() {
         </Layout>
     )
 }
-
