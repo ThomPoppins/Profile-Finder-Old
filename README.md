@@ -13,7 +13,7 @@
 >Password hash is compared and verified that the password is correct and still is securely saved.  
 
 <>
-###  Future functionalities and requirements:
+###  (future) Functionalities, ideas, requirements and specifications (to be developed)
 - (Native) React application for Android and iOS, functioning exactly the same as the webapp.
 
 - Has to be always fast, app has to be very smooth to handle and very fast, no noticeable loading times and has to respond immediately when user selects/browses/configures/searches/opens pages etc.
