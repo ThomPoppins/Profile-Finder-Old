@@ -111,7 +111,7 @@ export default function Login() {
         {/* bottom */}
         <div className='input-group'>
           <p className='text-center text-gray-400 '>
-            Don&apos;t have an account yet? <Link href={'/register'} className='text-blue-700'>Sign Up</Link>
+            Heb je nog geen account? <Link href={'/aanmelden'} className='text-blue-700'>Meld je aan</Link>
           </p>
         </div>
       </section>
