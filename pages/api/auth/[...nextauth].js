@@ -47,5 +47,6 @@ export default NextAuth({
       clientId: process.env.FACEBOOK_CLIENT_ID,
       clientSecret: process.env.FACEBOOK_CLIENT_SECRET
     }),
-  ]
+  ],
+  secret: "hOd7poRyIkGBnkQ5IZvrnbDJ8D8/FRC6nEzzQpkH9ko="
 })
