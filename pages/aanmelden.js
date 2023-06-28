@@ -13,7 +13,7 @@ export default function Aanmelden() {
     // formik hook
     const formik = useFormik({
         initialValues: {
-            gebruikersnaam: '',
+            username: '',
             email: '',
             password: '',
             cpassword: ''
@@ -38,19 +38,19 @@ export default function Aanmelden() {
                     <p className='w-3/4 mx-auto text-gray-400'>Registreer een nieuw account.</p>
                 </div>
                 <form className='flex flex-col gap-5' onSubmit={formik.handleSubmit}>
-                    <div className={`${styles.input_group} ${formik.errors.gebruikersnaam && formik.touched.gebruikersnaam ? 'border-rose-600' : ''}`}>
+                    <div className={`${styles.input_group} ${formik.errors.username && formik.touched.username ? 'border-rose-600' : ''}`}>
                         <input
                             type='text'
-                            name='gebruikersnaam'
+                            name='username'
                             placeholder='Gebruikersnaam'
                             className={styles.input_text}
-                            {...formik.getFieldProps('gebruikersnaam')}
+                            {...formik.getFieldProps('username')}
                         />
                         <span className='icon flex items-center px-4'>
                             <HiOutlineUser size={25} />
                         </span>
                     </div>
-                    {formik.errors.gebruikersnaam && formik.touched.gebruikersnaam ? <span  className='text-rose-500'>{formik.errors.gebruikersnaam}</span> : <></>}
+                    {formik.errors.username && formik.touched.username ? <span  className='text-rose-500'>{formik.errors.username}</span> : <></>}
                     <div className={`${styles.input_group} ${formik.errors.email && formik.touched.email ? 'border-rose-600' : ''}`}>
                         <input
                             type='email'
