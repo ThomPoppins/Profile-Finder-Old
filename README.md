@@ -63,5 +63,8 @@ There will be different kinds of authorization for users in the group, because m
 > Created usermodel schema compatible with MongoDB database where I save usersaccounts. Username, email and hashed password are saved to "users" table.  
 
 <>
-  
+
+#### Search functionality:
 ##### **basic search functionality to start with**: https://react.dev/learn/thinking-in-react  
+  
+##### **Search query and filter list functionaly example in challenge 2**: https://react.dev/learn/sharing-state-between-components#challenges
