@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '../layout/layout'
+import LayoutAccount from '../layout/layoutaccount'
 import Link from 'next/link'
 import styles from '../styles/Form.module.css'
 import Image from 'next/image'
@@ -37,7 +37,7 @@ export default function Login() {
       callbackUrl: "/",
     })
 
-    if(status.ok) router.push(status.url)
+    if (status.ok) router.push(status.url)
   }
 
   // Google Handler function
@@ -56,7 +56,7 @@ export default function Login() {
   }
 
   return (
-    <Layout>
+    <LayoutAccount>
       <Head>
         <title>Login</title>
       </Head>
@@ -81,7 +81,7 @@ export default function Login() {
               <HiAtSymbol size={25} />
             </span>
           </div>
-          {formik.errors.email && formik.touched.email ? <span  className='text-rose-500'>{formik.errors.email}</span> : <></>}
+          {formik.errors.email && formik.touched.email ? <span className='text-rose-500'>{formik.errors.email}</span> : <></>}
 
           <div className={`${styles.input_group} ${formik.errors.password && formik.touched.password ? 'border-rose-600' : ''}`}>
             <input
@@ -127,6 +127,6 @@ export default function Login() {
           </p>
         </div>
       </section>
-    </Layout>
+    </LayoutAccount>
   )
 }
