@@ -2,10 +2,10 @@
 
 ### (still) Just a WebApplication
 <>
-### Profile-Finder v0.0.3
+### Profile-Finder v0.0.4
 
-> NextJS upgrade to version 13, ready for migrating pages files to App folder
-> Created user profile page, user hase to be authorize to land on profile page, otherwise redirected to /login
+> New navigation bar on top without functionalities yet
+> Created Index layout with field for search purpose
 
 <>
 ###  (future) Functionalities, ideas, requirements and specifications (to be developed)
@@ -39,6 +39,13 @@ There will be different kinds of authorization for users in the group, because m
 
 # Older versions:
 <>
+
+### Profile-Finder v0.0.3
+
+> NextJS upgrade to version 13, ready for migrating pages files to App folder
+> Created user profile page, user hase to be authorize to land on profile page, otherwise redirected to /login
+<>
+
 ### Profile-Finder v0.0.2
   
 > API end-point for registering users /api/auth/aanmelden works without problems.  
