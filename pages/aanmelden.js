@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '../layout/layout.js'
+import LayoutAccount from '../layout/layoutaccount.js'
 import styles from '../styles/Form.module.css'
 import { HiAtSymbol, HiFingerPrint, HiOutlineUser } from "react-icons/hi";
 import Link from 'next/link'
@@ -33,14 +33,14 @@ export default function Aanmelden() {
       body: JSON.stringify(values)
     }
     await fetch('http://localhost:3000/api/auth/aanmelden', options)
-    .then(res => res.json())
-    .then((data) => {
-      if(data) router.push('http://localhost:3000')
-    })
+      .then(res => res.json())
+      .then((data) => {
+        if (data) router.push('http://localhost:3000')
+      })
   }
 
   return (
-    <Layout>
+    <LayoutAccount>
       <Head>
         <title>Account aanmaken</title>
       </Head>
@@ -117,6 +117,6 @@ export default function Aanmelden() {
           </p>
         </div>
       </section>
-    </Layout>
+    </LayoutAccount>
   )
 }
