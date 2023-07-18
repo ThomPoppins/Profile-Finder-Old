@@ -32,10 +32,12 @@ export default function Aanmelden() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(values)
     }
-    await fetch('http://localhost:3000/api/auth/aanmelden', options)
+    await fetch('https://profile-finder-black.vercel.app/aanmelden', options)
+      // TODO change back to:      await fetch('http://localhost:3000/api/auth/aanmelden', options)
       .then(res => res.json())
       .then((data) => {
-        if (data) router.push('http://localhost:3000')
+        if (data) router.push('https://profile-finder-black.vercel.app')
+        // TODO change back to:    if (data) router.push('http://localhost:3000')
       })
   }
 

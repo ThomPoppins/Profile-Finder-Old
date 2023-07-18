@@ -42,17 +42,20 @@ export default function Login() {
 
   // Google Handler function
   async function handleGoogleSignIn() {
-    signIn('google', { callbackUrl: "http://localhost:3000" })
+    signIn('google', { callbackUrl: "https://profile-finder-black.vercel.app" })
+    // TODO change back to:     signIn('google', { callbackUrl: "http://localhost:3000" })
   }
 
   // Github login
   async function handleGithubSignIn() {
-    signIn('github', { callbackUrl: "http://localhost:3000" })
+    signIn('github', { callbackUrl: "https://profile-finder-black.vercel.app" })
+    // TODO change back to:     signIn('github', { callbackUrl: "http://localhost:3000" })
   }
 
   // Facebook login
   async function handleFacebookSignIn() {
-    signIn('facebook', { callbackUrl: "http://localhost:3000" })
+    signIn('facebook', { callbackUrl: "https://profile-finder-black.vercel.app" })
+    // TODO change back to:     signIn('facebook', { callbackUrl: "http://localhost:3000" })
   }
 
   return (
