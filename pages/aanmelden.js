@@ -46,11 +46,9 @@ export default function Aanmelden() {
       body: JSON.stringify(values)
     }
     await fetch(baseUrl + '/api/auth/aanmelden', options)
-      // TODO change back to:      await fetch('http://localhost:3000/api/auth/aanmelden', options)
       .then(res => res.json())
       .then((data) => {
         if (data) router.push(baseUrl)
-        // TODO change back to:    if (data) router.push('http://localhost:3000')
       })
   }
 
@@ -62,11 +60,9 @@ export default function Aanmelden() {
       body: JSON.stringify(values)
     }
     await fetch(baseUrl + '/api/auth/aanmelden', options)
-      // TODO change back to:      await fetch('http://localhost:3000/api/auth/aanmelden', options)
       .then(res => res.json())
       .then((data) => {
         if (data) router.push(baseUrl)
-        // TODO change back to:    if (data) router.push('http://localhost:3000')
       })
   }
 

@@ -24,7 +24,7 @@ export default function Login() {
     validate: login_validate,
     onSubmit
   });
-  // initialize base URL variable as {baseUrl}
+  // initialize {baseUrl}
   if (typeof window !== "undefined") {
     const url = window.location.href;
 

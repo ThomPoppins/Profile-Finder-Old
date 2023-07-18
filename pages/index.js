@@ -47,12 +47,15 @@ function User({ session, handleSignOut }) {
     <div>
       <LayoutIndex>
         <main className="container mx-auto text-center py-20">
-          <h3 className='text-4xl font-bold'>Welkom op de Profile-Finder webapp!</h3>
+          <div className='text-white' id='pageTop'>
+            <h3 className='text-4xl font-bold'>Welkom op de Profile-Finder webapp!</h3>
 
-          <div className='details'>
-            <h5>{session.user.name}</h5>
-            <h5>{session.user.email}</h5>
+            <div className='details'>
+              <h5>{session.user.name}</h5>
+              <h5>{session.user.email}</h5>
+            </div>
           </div>
+
 
           <div className="bg-red-500 h-32" id="outersearchbox">
             <div className="text-center py-10 bg-slate-50 md:rounded-md">
