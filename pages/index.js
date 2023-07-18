@@ -57,19 +57,28 @@ function User({ session, handleSignOut }) {
             </div>
           </div>
 
-
+          {/* TODO  create a input type search field */}
+          {/* Box with search input field */}
           <div className="bg-red-500 h-32" id="outersearchbox">
             <div className="text-center py-10 bg-slate-50 md:rounded-md">
-              Vind profiel
+              <input type='text' placeholder='Vind profiel' />
             </div>
           </div>
+          {/* Logout button */}
           <div className='flex justify-center'>
             <button className='mt-5 px-10 py-1 rounded-sm bg-gray-50' onClick={handleSignOut}>Uitloggen</button>
           </div>
-
+          {/* Button to demo page */}
+          <div className='flex justify-center'>
+            <Link href={'/demo'} className='mt-5 px-10 py-1 rounded-sm bg-indigo-500 text-gray-50'>Demo</Link>
+          </div>
+          {/* Button to profile page */}
           <div className='flex justify-center'>
             <Link href={'/profile'} className='mt-5 px-10 py-1 rounded-sm bg-indigo-500 text-gray-50'>Profielpagina</Link>
           </div>
+
+
+
         </main>
       </LayoutIndex>
     </div>
