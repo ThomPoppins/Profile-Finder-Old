@@ -13,10 +13,8 @@ import { useRouter } from 'next/router'
 export default function Login() {
   // initialize state {show} initial value = false
   const [show, setShow] = useState(false);
-
   // router hook
   const router = useRouter()
-
   // formik hook
   const formik = useFormik({
     initialValues: {
@@ -26,7 +24,20 @@ export default function Login() {
     validate: login_validate,
     onSubmit
   });
+  // initialize base URL variable as {baseUrl}
+  if (typeof window !== "undefined") {
+    const url = window.location.href;
 
+    const vercelBaseURL = "https://profile-finder-black.vercel.app";
+    const localhostBaseURL = "http://localhost:3000"
+    if (url.startsWith(vercelBaseURL)) {
+      var baseUrl = vercelBaseURL;
+    } else {
+      var baseUrl = localhostBaseURL;
+    }
+  }
+
+  // Log Formik form errors if wanted
   // console.log(formik.errors)
 
   async function onSubmit(values) {
@@ -42,19 +53,22 @@ export default function Login() {
 
   // Google Handler function
   async function handleGoogleSignIn() {
-    signIn('google', { callbackUrl: "https://profile-finder-black.vercel.app" })
+    signIn('google', { callbackUrl: baseUrl })
+    // signIn('google', { callbackUrl: "https://profile-finder-black.vercel.app" })
     // TODO change back to:     signIn('google', { callbackUrl: "http://localhost:3000" })
   }
 
   // Github login
   async function handleGithubSignIn() {
-    signIn('github', { callbackUrl: "https://profile-finder-black.vercel.app" })
+    signIn('github', { callbackUrl: baseUrl })
+    // signIn('github', { callbackUrl: "https://profile-finder-black.vercel.app" })
     // TODO change back to:     signIn('github', { callbackUrl: "http://localhost:3000" })
   }
 
   // Facebook login
   async function handleFacebookSignIn() {
-    signIn('facebook', { callbackUrl: "https://profile-finder-black.vercel.app" })
+    signIn('facebook', { callbackUrl: baseUrl })
+    // signIn('facebook', { callbackUrl: "https://profile-finder-black.vercel.app" })
     // TODO change back to:     signIn('facebook', { callbackUrl: "http://localhost:3000" })
   }
 
