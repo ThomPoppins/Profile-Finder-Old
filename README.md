@@ -5,9 +5,10 @@
 ### Profile-Finder v0.0.4
 
 > New navigation bar on top without functionalities yet
+
 > Created Index layout with field for search purpose
 
-<>
+
 ###  (future) Functionalities, ideas, requirements and specifications (to be developed)
 - (Native) React application for Android and iOS, functioning exactly the same as the webapp.
 
