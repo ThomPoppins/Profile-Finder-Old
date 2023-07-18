@@ -38,7 +38,6 @@ export default function Aanmelden() {
       var baseUrl = localhostBaseURL;
     }
   }
-  console.log(baseUrl)
 
   async function onSubmit(values) {
     const options = {
