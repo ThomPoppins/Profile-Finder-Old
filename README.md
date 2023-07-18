@@ -3,9 +3,9 @@
 ### still just a WebApplication
 
 <>
-### Profile-Finder v0.0.6
+### Profile-Finder v0.0.7
 
-> add sample profile data to user session and use in profile page
+> Show slogan on profile page
 
 <>
 
@@ -40,6 +40,13 @@ There will be different kinds of authorization for users in the group, because m
 
 # Older versions:
 <>
+
+### Profile-Finder v0.0.6
+
+> add sample profile data to user session and use in profile page
+
+> Display profile picture on profile page.
+
 
 ### Profile-Finder v0.0.5
 

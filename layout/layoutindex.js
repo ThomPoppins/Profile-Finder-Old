@@ -4,8 +4,7 @@ import LayoutNavigation from './layoutnavigation.js'
 export default function LayoutIndex({ children }) {
   return (
     <div>
-      <LayoutNavigation />
-      <div className="flex min-h-screen bg-violet-900">
+      <div className="flex items-center min-h-screen bg-violet-900 ">
         {children}
       </div>
     </div>

@@ -64,26 +64,23 @@ function User({ session, handleSignOut }) {
 
           {/* TODO  create a input type search field */}
           {/* Box with search input field */}
-          <div className="bg-red-500 h-32" id="outersearchbox">
-            <div className="text-center py-10 bg-slate-50 md:rounded-md">
-              <input type='text' placeholder='Vind profiel' />
-            </div>
+
+          <div className="text-center mx-auto my-10 py-3 max-w-md bg-red-500 rounded-md" id="outersearchbox">
+            <input type='text' placeholder='Vind profiel' className='w-11/12 mx-2 px-6 rounded-full' />
           </div>
-          {/* Logout button */}
+
+          {/* Button to profile page */}
           <div className='flex justify-center'>
-            <button className='mt-5 px-10 py-1 rounded-sm bg-gray-50' onClick={handleSignOut}>Uitloggen</button>
+            <Link href={'/profile'} className='mt-5 px-10 py-1 rounded-sm bg-indigo-500 text-gray-50'>Profielpagina</Link>
           </div>
           {/* Button to demo page */}
           <div className='flex justify-center'>
             <Link href={'/demo'} className='mt-5 px-10 py-1 rounded-sm bg-indigo-500 text-gray-50'>Demo</Link>
           </div>
-          {/* Button to profile page */}
+          {/* Logout button */}
           <div className='flex justify-center'>
-            <Link href={'/profile'} className='mt-5 px-10 py-1 rounded-sm bg-indigo-500 text-gray-50'>Profielpagina</Link>
+            <button className='mt-5 px-10 py-1 rounded-sm bg-gray-50' onClick={handleSignOut}>Uitloggen</button>
           </div>
-
-
-
         </main>
       </LayoutIndex>
     </div>
