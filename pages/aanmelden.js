@@ -26,7 +26,7 @@ export default function Aanmelden() {
     onSubmit
   })
 
-  // init URL variable as {url}
+  // initialize base URL variable as {baseUrl}
   if (typeof window !== "undefined") {
     const url = window.location.href;
 
@@ -38,6 +38,7 @@ export default function Aanmelden() {
       var baseUrl = localhostBaseURL;
     }
   }
+  console.log(baseUrl)
 
   async function onSubmit(values) {
     const options = {
