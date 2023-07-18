@@ -1,6 +1,6 @@
 # Profile Finder 
 
-### (still) Just a WebApplication
+### still just a WebApplication
 
 <>
 ### Profile-Finder v0.0.4

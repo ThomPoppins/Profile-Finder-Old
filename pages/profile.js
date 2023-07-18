@@ -19,8 +19,6 @@ export default function Profile() {
       </LayoutIndex>
     )
   }
-
-
 }
 
 export async function getServerSideProps({ req }) {
