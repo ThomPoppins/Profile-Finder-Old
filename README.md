@@ -1,12 +1,15 @@
 # Profile Finder 
 
 ### (still) Just a WebApplication
+
 <>
 ### Profile-Finder v0.0.4
 
 > New navigation bar on top without functionalities yet
 
 > Created Index layout with field for search purpose
+
+> Use session on the profile page to access data
 
 
 ###  (future) Functionalities, ideas, requirements and specifications (to be developed)

@@ -24,7 +24,7 @@ export default function Login() {
     validate: login_validate,
     onSubmit
   });
-  // initialize base URL variable as {baseUrl}
+  // initialize {baseUrl}
   if (typeof window !== "undefined") {
     const url = window.location.href;
 
@@ -35,7 +35,6 @@ export default function Login() {
     } else {
       var baseUrl = localhostBaseURL;
     }
-    console.log(baseUrl)
   }
 
   // Log Formik form errors if wanted
@@ -55,22 +54,17 @@ export default function Login() {
   // Google Handler function
   async function handleGoogleSignIn() {
     signIn('google', { callbackUrl: baseUrl })
-    // signIn('google', { callbackUrl: "https://profile-finder-black.vercel.app" })
-    // TODO change back to:     signIn('google', { callbackUrl: "http://localhost:3000" })
   }
 
   // Github login
   async function handleGithubSignIn() {
     signIn('github', { callbackUrl: baseUrl })
-    // signIn('github', { callbackUrl: "https://profile-finder-black.vercel.app" })
-    // TODO change back to:     signIn('github', { callbackUrl: "http://localhost:3000" })
   }
 
   // Facebook login
+  // TODO fix login for Vercel
   async function handleFacebookSignIn() {
     signIn('facebook', { callbackUrl: baseUrl })
-    // signIn('facebook', { callbackUrl: "https://profile-finder-black.vercel.app" })
-    // TODO change back to:     signIn('facebook', { callbackUrl: "http://localhost:3000" })
   }
 
   return (
