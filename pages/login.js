@@ -35,6 +35,7 @@ export default function Login() {
     } else {
       var baseUrl = localhostBaseURL;
     }
+    console.log(baseUrl)
   }
 
   // Log Formik form errors if wanted
