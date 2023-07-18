@@ -6,6 +6,10 @@ const userSchema = new Schema({
     password: String,
     firstname: String,
     lastname: String,
+    profile: {
+        slogan: String,
+        profileimage: String,
+    }
 })
 
 const Users = models.user || model('user', userSchema);
