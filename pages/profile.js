@@ -3,7 +3,7 @@ import { redirect } from "next/dist/server/api-utils";
 import LayoutIndex from "../layout/layoutindex";
 import { getSession, useSession } from "next-auth/react"
 import Image from "next/image";
-import AddProfileDataToUserSession from "../components/AddProfileDataToUserSession";
+import AddProfileDataToUserSession from '../components/addprofiledatatousersession'
 
 
 export default function Profile() {
