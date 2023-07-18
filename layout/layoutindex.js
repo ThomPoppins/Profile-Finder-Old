@@ -1,5 +1,5 @@
 import styles from '../styles/Layout.module.css'
-import LayoutNavigation from './layoutnavigation.js'
+
 
 export default function LayoutIndex({ children }) {
   return (

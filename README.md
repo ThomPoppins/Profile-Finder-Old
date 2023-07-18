@@ -7,6 +7,7 @@
 
 > Show slogan on profile page
 
+> Remove navigation bar from homepage
 <>
 
 ###  (future) Functionalities, ideas, requirements and specifications (to be developed)
