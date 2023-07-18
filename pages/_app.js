@@ -12,7 +12,6 @@ export default function App({
         LogRocket.identify('THE_USER_ID_IN_YOUR_APP', {
           name: 'Thom Poppins',
           email: 'thompoppins@example.com',
-
           // Add your own custom user variables here, ie:
           subscriptionType: 'pro'
         })}
