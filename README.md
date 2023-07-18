@@ -1,15 +1,13 @@
 # Profile Finder 
 
-### (still) Just a WebApplication
+### still just a WebApplication
 
 <>
-### Profile-Finder v0.0.4
+### Profile-Finder v0.0.5
 
-> New navigation bar on top without functionalities yet
+> New demo page for demonstrating practices I did
 
-> Created Index layout with field for search purpose
-
-> Use session on the profile page to access data
+> Navigation bar removed from accountpages login and aanmelden because it's unnecessary
 
 
 ###  (future) Functionalities, ideas, requirements and specifications (to be developed)
@@ -42,6 +40,16 @@ There will be different kinds of authorization for users in the group, because m
 
 
 # Older versions:
+<>
+
+### Profile-Finder v0.0.4
+
+> New navigation bar on top without functionalities yet
+
+> Created Index layout with field for search purpose
+
+> Use session on the profile page to access data
+
 <>
 
 ### Profile-Finder v0.0.3
