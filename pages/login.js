@@ -19,7 +19,7 @@ export default function Login() {
   const formik = useFormik({
     initialValues: {
       email: '',
-      password: ''
+      password: '',
     },
     validate: login_validate,
     onSubmit
@@ -37,7 +37,7 @@ export default function Login() {
     }
   }
 
-  // Log Formik form errors if wanted
+  // Log Formik form errors if necessary 
   // console.log(formik.errors)
 
   async function onSubmit(values) {
@@ -62,7 +62,7 @@ export default function Login() {
   }
 
   // Facebook login
-  // TODO fix login for Vercel
+  // TODO fix login this on Vercel
   async function handleFacebookSignIn() {
     signIn('facebook', { callbackUrl: baseUrl })
   }

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { getSession, useSession, signOut } from "next-auth/react"
 import LayoutIndex from '../layout/layoutindex'
+import AddProfileDataToUserSession from '../components/AddProfileDataToUserSession'
 
 
 export default function Home() {
@@ -43,6 +44,11 @@ function Guest() {
 
 // Authorize User
 function User({ session, handleSignOut }) {
+  // add profile config to user session
+  AddProfileDataToUserSession(session);
+
+  console.log(session.user)
+
   return (
     <div>
       <LayoutIndex>
@@ -53,7 +59,6 @@ function User({ session, handleSignOut }) {
             <div className='details'>
               <h5>{session.user.name}</h5>
               <h5>{session.user.email}</h5>
-              {console.log(session.user)}
             </div>
           </div>
 
