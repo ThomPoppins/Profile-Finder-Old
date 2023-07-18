@@ -17,6 +17,8 @@ export default function Aanmelden() {
   // formik hook
   const formik = useFormik({
     initialValues: {
+      firstname: '',
+      lastname: '',
       username: '',
       email: '',
       password: '',
@@ -78,6 +80,35 @@ export default function Aanmelden() {
           <p className='w-3/4 mx-auto text-gray-400'>Registreer een nieuw account.</p>
         </div>
         <form className='flex flex-col gap-5' onSubmit={formik.handleSubmit}>
+          {/* firstname input field */}
+          <div className={`${styles.input_group} ${formik.errors.firstname && formik.touched.firstname ? 'border-rose-600' : ''}`}>
+            <input
+              type='text'
+              name='firstname'
+              placeholder='Voornaam'
+              className={styles.input_text}
+              {...formik.getFieldProps('firstname')}
+            />
+            <span className='icon flex items-center px-4'>
+              <HiOutlineUser size={25} />
+            </span>
+          </div>
+          {formik.errors.firstname && formik.touched.firstname ? <span className='text-rose-500'>{formik.errors.firstname}</span> : <></>}
+          {/* lastname input field */}
+          <div className={`${styles.input_group} ${formik.errors.lastname && formik.touched.lastname ? 'border-rose-600' : ''}`}>
+            <input
+              type='text'
+              name='lastname'
+              placeholder='Achternaam'
+              className={styles.input_text}
+              {...formik.getFieldProps('lastname')}
+            />
+            <span className='icon flex items-center px-4'>
+              <HiOutlineUser size={25} />
+            </span>
+          </div>
+          {formik.errors.lastname && formik.touched.lastname ? <span className='text-rose-500'>{formik.errors.lastname}</span> : <></>}
+          {/* username input field  */}
           <div className={`${styles.input_group} ${formik.errors.username && formik.touched.username ? 'border-rose-600' : ''}`}>
             <input
               type='text'
@@ -91,6 +122,7 @@ export default function Aanmelden() {
             </span>
           </div>
           {formik.errors.username && formik.touched.username ? <span className='text-rose-500'>{formik.errors.username}</span> : <></>}
+          {/* email input field  */}
           <div className={`${styles.input_group} ${formik.errors.email && formik.touched.email ? 'border-rose-600' : ''}`}>
             <input
               type='email'
@@ -104,6 +136,7 @@ export default function Aanmelden() {
             </span>
           </div>
           {formik.errors.email && formik.touched.email ? <span className='text-rose-500'>{formik.errors.email}</span> : <></>}
+          {/* password input field  */}
           <div className={`${styles.input_group} ${formik.errors.password && formik.touched.password ? 'border-rose-600' : ''}`}>
             <input
               type={`${show.password ? "text" : "password"}`}
@@ -117,6 +150,7 @@ export default function Aanmelden() {
             </span>
           </div>
           {formik.errors.password && formik.touched.password ? <span className='text-rose-500'>{formik.errors.password}</span> : <></>}
+          {/* confirm password input field  */}
           <div className={`${styles.input_group} ${formik.errors.cpassword && formik.touched.cpassword ? 'border-rose-600' : ''}`}>
             <input
               type={`${show.cpassword ? "text" : "password"}`}
