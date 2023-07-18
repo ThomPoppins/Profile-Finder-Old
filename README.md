@@ -3,12 +3,11 @@
 ### still just a WebApplication
 
 <>
-### Profile-Finder v0.0.5
+### Profile-Finder v0.0.6
 
-> New demo page for demonstrating practices I did
+> add sample profile data to user session and use in profile page
 
-> Navigation bar removed from accountpages login and aanmelden because it's unnecessary
-
+<>
 
 ###  (future) Functionalities, ideas, requirements and specifications (to be developed)
 - (Native) React application for Android and iOS, functioning exactly the same as the webapp.
@@ -40,6 +39,14 @@ There will be different kinds of authorization for users in the group, because m
 
 
 # Older versions:
+<>
+
+### Profile-Finder v0.0.5
+
+> New demo page for demonstrating practices I did
+
+> Navigation bar removed from accountpages login and aanmelden because it's unnecessary
+
 <>
 
 ### Profile-Finder v0.0.4
