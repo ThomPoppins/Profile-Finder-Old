@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { getSession, useSession, signOut } from "next-auth/react"
 import LayoutIndex from '../layout/layoutindex'
-import AddProfileDataToUserSession from '../components/AddProfileDataToUserSession'
+import AddProfileDataToUserSession from '../components/addprofiledatatousersession'
 
 
 export default function Home() {
