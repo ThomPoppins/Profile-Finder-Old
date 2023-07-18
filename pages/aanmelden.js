@@ -26,17 +26,46 @@ export default function Aanmelden() {
     onSubmit
   })
 
+  // init URL variable as {url}
+  if (typeof window !== "undefined") {
+    const url = window.location.href;
+
+    const vercelBaseURL = "https://profile-finder-black.vercel.app";
+    const localhostBaseURL = "http://localhost:3000"
+    if (url.startsWith(vercelBaseURL)) {
+      var baseUrl = vercelBaseURL;
+    } else {
+      var baseUrl = localhostBaseURL;
+    }
+  }
+
   async function onSubmit(values) {
     const options = {
       method: "POST",
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(values)
     }
-    await fetch('https://profile-finder-black.vercel.app/aanmelden', options)
+    await fetch(baseUrl + '/api/auth/aanmelden', options)
       // TODO change back to:      await fetch('http://localhost:3000/api/auth/aanmelden', options)
       .then(res => res.json())
       .then((data) => {
-        if (data) router.push('https://profile-finder-black.vercel.app')
+        if (data) router.push(baseUrl)
+        // TODO change back to:    if (data) router.push('http://localhost:3000')
+      })
+  }
+
+
+  async function onSubmit(values) {
+    const options = {
+      method: "POST",
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(values)
+    }
+    await fetch(baseUrl + '/api/auth/aanmelden', options)
+      // TODO change back to:      await fetch('http://localhost:3000/api/auth/aanmelden', options)
+      .then(res => res.json())
+      .then((data) => {
+        if (data) router.push(baseUrl)
         // TODO change back to:    if (data) router.push('http://localhost:3000')
       })
   }
