@@ -75,7 +75,7 @@ function User({ session, handleSignOut }) {
           </div>
           {/* Button to demo page */}
           <div className='flex justify-center'>
-            <Link href={'/demo'} className='mt-5 px-10 py-1 rounded-sm bg-indigo-500 text-gray-50'>Demo</Link>
+            <Link href={'/threefiber3dtextdemo'} className='mt-5 px-10 py-1 rounded-sm bg-indigo-500 text-gray-50'>Demo</Link>
           </div>
           {/* Logout button */}
           <div className='flex justify-center'>
